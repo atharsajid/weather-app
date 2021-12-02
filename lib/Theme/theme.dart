@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 CustomTheme currenttheme = CustomTheme();
-Color primary = Colors.blue;
+Color primary = Colors.amber;
 Color primary2 = Colors.white;
 
 class CustomTheme with ChangeNotifier {
-  static bool isDarkMode = false;
+  static bool isDarkMode = true;
   ThemeMode get currenttheme => isDarkMode ? ThemeMode.dark : ThemeMode.light;
   void toggle() {
     isDarkMode = !isDarkMode;
@@ -28,8 +28,9 @@ class CustomTheme with ChangeNotifier {
           color: Colors.black,
         ),
         bodyText2: TextStyle(
-          color: Colors.grey,
-          fontSize: 14,
+          color: Colors.black,
+          fontSize: 40,
+          
         ),
       ),
       iconTheme: IconThemeData(
@@ -65,8 +66,8 @@ class CustomTheme with ChangeNotifier {
           color: Colors.white,
         ),
         bodyText2: TextStyle(
-          color: Colors.grey[400],
-          fontSize: 14,
+          color: Colors.white,
+          fontSize: 40,
         ),
       ),
       iconTheme: IconThemeData(
@@ -74,7 +75,7 @@ class CustomTheme with ChangeNotifier {
       ),
       inputDecorationTheme: InputDecorationTheme(
         labelStyle: TextStyle(color: Colors.white),
-        hintStyle: TextStyle(color: Colors.grey),
+        hintStyle: TextStyle(color: Colors.white),
     
         enabledBorder: OutlineInputBorder(
 

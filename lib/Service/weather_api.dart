@@ -9,25 +9,25 @@ getweather(String city) async {
 //api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
   final querryParameter = {
     "q": city,
-    "appid": "5eb451417d2753ced7fcb455482493d9"
+    "appid": "5eb451417d2753ced7fcb455482493d9",
+    "units": "metric",
   };
   final uri =
       Uri.https("api.openweathermap.org", "data/2.5/weather", querryParameter);
+
   var response = await http.get(uri);
   var json = jsonDecode(response.body);
-  double cel = (json["main"]["temp"]) - 273.15;
-  double far = (cel * 9 / 5) + 32;
-  dynamic currentTime = DateFormat.jm().format(DateTime.now());
+  // double cel = (json["main"]["temp"]) - 273.15;
+  // double far = (cel * 9 / 5) + 32;
+  // dynamic currentTime = DateFormat.jms().format(DateTime.now());
 
   WeatherModel weatherDetail = WeatherModel(
-      celsius: "${cel} C",
-      farenheit: "${far} F",
+      celsius: "${json["main"]["temp"]}°C",
       city: city,
-      main: json["weather"]["0"]["main"],
+      main: (json["weather"][0]["description"]),
       country: json["sys"]["country"],
       wind: json["wind"]["speed"],
-      date: currentTime,
       humidity: json["main"]["humidity"]);
 
-  return json;
+  return weatherDetail;
 }
