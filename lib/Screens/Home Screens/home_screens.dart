@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_glow/flutter_glow.dart';
+
 import 'package:intl/intl.dart';
 import 'package:wheather_app/Service/weather_api.dart';
 import 'package:wheather_app/Theme/theme.dart';
@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   // bool value = false;
   String city = "Karachi";
   String cty = "";
-  @override
+
   @override
   Widget build(BuildContext context) {
     return Container(
