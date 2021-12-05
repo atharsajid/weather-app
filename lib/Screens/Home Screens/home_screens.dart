@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/back3.jpg"),
+          image: const AssetImage("assets/back3.jpg"),
           fit: BoxFit.cover,
           colorFilter:
               ColorFilter.mode(Colors.black.withOpacity(0.1), BlendMode.darken),
@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.transparent,
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: Text("Weather Application"),
+          title: const Text("Weather Application"),
           centerTitle: true,
         ),
         body: Column(
@@ -47,12 +47,12 @@ class _HomeScreenState extends State<HomeScreen> {
               builder: (context, AsyncSnapshot snapshot) {
                 switch (snapshot.connectionState) {
                   case ConnectionState.waiting:
-                    return Center(child: CircularProgressIndicator());
+                    return const Center(child: CircularProgressIndicator());
 
                   default:
                     if (snapshot.hasError) {
                       return Container(
-                        margin: EdgeInsets.all(20),
+                        margin: const EdgeInsets.all(20),
                         height: 500,
                         width: MediaQuery.of(context).size.width * 0.9,
                         decoration: BoxDecoration(
@@ -104,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
 //Find Button Widget
   Container findButton() {
     return Container(
-      margin: EdgeInsets.only(top: 10),
+      margin: const EdgeInsets.only(top: 10),
       child: OutlinedButton.icon(
         style: OutlinedButton.styleFrom(
           backgroundColor: Colors.transparent,
@@ -141,22 +141,22 @@ class _HomeScreenState extends State<HomeScreen> {
 //search bar widget
   Container searchBar() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20),
-      margin: EdgeInsets.all(10),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      margin: const EdgeInsets.all(10),
       height: 60,
       width: double.infinity,
       child: TextField(
-        style: TextStyle(color: Colors.white),
+        style: const TextStyle(color: Colors.white),
         onChanged: (value) {
           cty = value;
         },
         controller: searchcont,
         decoration: InputDecoration(
-          prefixIcon: Icon(
+          prefixIcon: const Icon(
             Icons.location_on,
             color: Colors.white,
           ),
-          label: Text("Search"),
+          label: const Text("Search"),
           hintText: "City Name",
           suffixIcon: IconButton(
             onPressed: () {
@@ -164,7 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 searchcont.clear();
               });
             },
-            icon: Icon(Icons.clear, color: Colors.white),
+            icon: const Icon(Icons.clear, color: Colors.white),
           ),
         ),
       ),
@@ -178,7 +178,7 @@ class _HomeScreenState extends State<HomeScreen> {
     String img,
   ) {
     return Container(
-      margin: EdgeInsets.all(20),
+      margin: const EdgeInsets.all(20),
       height: 500,
       width: MediaQuery.of(context).size.width * 0.9,
       decoration: BoxDecoration(
@@ -197,13 +197,13 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Stack(
         children: [
           Align(
-            alignment: Alignment(0, -1.3),
+            alignment: const Alignment(0, -1.3),
             child: Image.asset(
               img,
             ),
           ),
           Align(
-            alignment: Alignment(0, 0),
+            alignment: const Alignment(0, 0),
             child: Text(
               snapshot.data.celsius,
               style: TextStyle(
@@ -214,25 +214,25 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           Align(
-            alignment: Alignment(0, 0.2),
+            alignment: const Alignment(0, 0.2),
             child: Text("${snapshot.data.city},${snapshot.data.country}"),
           ),
           Align(
-            alignment: Alignment(0, 0.35),
+            alignment: const Alignment(0, 0.35),
             child: Text(
               snapshot.data.description,
-              style: TextStyle(fontSize: 22),
+              style: const TextStyle(fontSize: 22),
             ),
           ),
           Align(
-            alignment: Alignment(0, 0.55),
+            alignment: const Alignment(0, 0.55),
             child: Text(
-              "${DateFormat.yMd().format(DateTime.now())}",
+              DateFormat.yMd().format(DateTime.now()),
             ),
           ),
           Align(
-            alignment: Alignment(0, 1.3),
-            child: Container(
+            alignment: const Alignment(0, 1.3),
+            child: SizedBox(
               height: 150,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

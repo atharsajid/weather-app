@@ -30,7 +30,6 @@ class CustomTheme with ChangeNotifier {
         bodyText2: TextStyle(
           color: Colors.black,
           fontSize: 40,
-          
         ),
       ),
       iconTheme: IconThemeData(
@@ -39,14 +38,13 @@ class CustomTheme with ChangeNotifier {
       inputDecorationTheme: InputDecorationTheme(
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(32),
-          borderSide: BorderSide(color: Colors.black, width: 2),
+          borderSide: const BorderSide(color: Colors.black, width: 2),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(32),
-          borderSide: BorderSide(color: Colors.black, width: 2),
+          borderSide: const BorderSide(color: Colors.black, width: 2),
         ),
       ),
-      
     );
   }
 
@@ -59,10 +57,10 @@ class CustomTheme with ChangeNotifier {
         backgroundColor: Colors.transparent,
         shadowColor: Colors.transparent,
       ),
-      textTheme: TextTheme(
-        headline1: const TextStyle(
+      textTheme: const TextTheme(
+        headline1: TextStyle(
             color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
-        bodyText1: const TextStyle(
+        bodyText1: TextStyle(
           color: Colors.white,
         ),
         bodyText2: TextStyle(
@@ -74,17 +72,15 @@ class CustomTheme with ChangeNotifier {
         color: primary2,
       ),
       inputDecorationTheme: InputDecorationTheme(
-        labelStyle: TextStyle(color: Colors.white),
-        hintStyle: TextStyle(color: Colors.white),
-    
+        labelStyle: const TextStyle(color: Colors.white),
+        hintStyle: const TextStyle(color: Colors.white),
         enabledBorder: OutlineInputBorder(
-
           borderRadius: BorderRadius.circular(32),
-          borderSide: BorderSide(color: Colors.white, width: 2),
+          borderSide: const BorderSide(color: Colors.white, width: 2),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(32),
-          borderSide: BorderSide(color: Colors.white, width: 2),
+          borderSide: const BorderSide(color: Colors.white, width: 2),
         ),
       ),
     );
