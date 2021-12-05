@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "630253809377",
+    "project_id": "fir-class-c90ec",
+    "storage_bucket": "fir-class-c90ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630253809377:android:e22125ac9bf3a5accc51a0",
+        "android_client_info": {
+          "package_name": "com.example.wheather_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630253809377-9aks38tsacsotp4ravs8tdumr3fqob1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_QxTzqfyl6gQkPG6AGTHExXiR7XWfBbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630253809377-9aks38tsacsotp4ravs8tdumr3fqob1r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

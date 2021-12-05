@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 import 'Screens/Home Screens/home_screens.dart';
 import 'Theme/theme.dart';
 
