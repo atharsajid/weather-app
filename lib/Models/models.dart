@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class WeatherModel {
   String celsius;
-
+  String main;
   String city;
-  dynamic main;
+  dynamic description;
   String country;
   num wind;
   num humidity;
@@ -16,5 +16,6 @@ class WeatherModel {
     required this.country,
     required this.wind,
     required this.humidity,
+    required this.description,
   });
 }

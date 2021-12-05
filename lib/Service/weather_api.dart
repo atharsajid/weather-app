@@ -22,7 +22,8 @@ getweather(String city) async {
   WeatherModel weatherDetail = WeatherModel(
       celsius: "${json["main"]["temp"]}°C",
       city: city,
-      main: (json["weather"][0]["description"]),
+      main: (json["weather"][0]["main"]),
+      description: (json["weather"][0]["description"]),
       country: json["sys"]["country"],
       wind: json["wind"]["speed"],
       humidity: json["main"]["humidity"]);
